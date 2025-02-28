@@ -40,11 +40,11 @@ class Rocket:
             if self.m > 0:
                 T = self.T
                 self.m -= self.br * constants['dt']
-                mass -= self.br * constants['dt']  # ✅ Corrected mass reduction
+                mass -= self.br * constants['dt']  reduction
             else:
                 T = 0
 
-            a = (T - (mass * constants['g'])) / mass  # ✅ Fixed acceleration formula
+            a = (T - (mass * constants['g'])) / mass   acceleration formula
             v += a * constants['dt']
             h += v * constants['dt']
 
@@ -55,7 +55,7 @@ class Rocket:
             time.append(t)
             altitude.append(h)
 
-            t += constants['dt']  # ✅ Update time correctly
+            t += constants['dt']  
 
         # Plot results
         def plot(time, alt):
